@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>跳动的心</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#wrap{
+				position:relative;
+				width: 200px;
+				margin: 200px auto 0;
+				animation: myheart 1.5s linear infinite;
+			}
+			.left_heart,.right_heart{
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100px;
+				height: 150px;
+				border-radius:50px 50px 0 0 ;
+				background-color: #f54158;
+			}
+			.left_heart{
+				transform:translateX(55.5px) rotate(45deg);
+			}
+			.right_heart{
+				transform:translateX(20px) rotate(-45deg);
+			}
+			@keyframes myheart {
+				0% {
+					-webkit-transform: scale(1);
+				}
+				50% {
+				    -webkit-transform: scale(0.8);
+				}
+				100% {
+				    -webkit-transform: scale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+	    <div id="wrap">
+	    	<div class="left_heart"></div>
+	    	<div class="right_heart"></div>
+	    </div>
+	</body>
+</html>
